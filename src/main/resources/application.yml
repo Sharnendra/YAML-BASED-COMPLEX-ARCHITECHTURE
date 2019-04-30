@@ -5,17 +5,38 @@ service:
      servicename: hello
      commonConfigurations:
        methodType : GET/POST/PUT/DELETE
+       endpoint: localhost:8080/hello
+       allowedQueryParams: 
+        user,
+        user1255
        inputSchemaFile: 
        outputSchemaFile:
        inputValidationRequired : true
        outputValidationRequired : true
        requiredHeaders : [sharenendsa, vasodsdf]
+       securityHeaders:
+        -
+          headername : app_id
+          headervalue: dummyValue
+        -
+          headername : app_id
+          headervalue: dummyValue
     -
      servicename: hello2
      commonConfigurations:
        methodType : GET/POST/PUT/DELETE
+       endpoint: localhost:8080/hello2
+       allowedQueryParams: 
+         user2
        inputSchemaFile: 
        outputSchemaFile:
        inputValidationRequired : true
        outputValidationRequired : true
        requiredHeaders : []
+       securityHeaders:
+        -
+          headername : app_id
+          headervalue: dummyValue
+        -
+          headername : app_id
+          headervalue: dummyValue
