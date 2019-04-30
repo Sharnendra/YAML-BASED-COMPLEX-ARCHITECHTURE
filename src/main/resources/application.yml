@@ -1,14 +1,21 @@
-server:
-  port : 9000
-  
 service:
-  data: 
+  serviceTypeHeader : service_type
+  servicemap:
     -
-      servicename: service1
-      host: localhost:7008/geturl/getData
-      json: provided2
+     servicename: hello
+     commonConfigurations:
+       methodType : GET/POST/PUT/DELETE
+       inputSchemaFile: 
+       outputSchemaFile:
+       inputValidationRequired : true
+       outputValidationRequired : true
+       requiredHeaders : [sharenendsa, vasodsdf]
     -
-      servicename: dataShare3
-      host: localhost3
-      json: provided3
-      
+     servicename: hello2
+     commonConfigurations:
+       methodType : GET/POST/PUT/DELETE
+       inputSchemaFile: 
+       outputSchemaFile:
+       inputValidationRequired : true
+       outputValidationRequired : true
+       requiredHeaders : []
